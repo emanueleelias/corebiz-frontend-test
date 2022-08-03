@@ -1,0 +1,126 @@
+@import "../../styles/variables";
+@import "../../styles/fonts.scss";
+@import "../../styles/mixins";
+
+.header{
+
+    height: 80px;
+    width: 100%;
+    background-color: $color-white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: nunito;
+ 
+    @include breakpoint(md) {
+        flex-wrap: wrap;
+        margin-bottom: 11px;
+    }
+
+    &__menu {
+
+        display: none;
+
+        @include breakpoint(sm) {
+            display: block;
+            img {
+                width: 22px;
+            }
+        }
+    }
+
+    &__logo {
+
+        img {
+            @include breakpoint(md) {
+                width: 102px;
+            }
+        }
+    }
+
+
+
+    &__form{
+
+        position: relative;
+        width: 100%;
+        padding: 0 40px;
+
+        input {
+            width: 100%;
+            
+            padding: 10px 0;
+            border: none;
+            outline: none;
+            border-bottom: 1px solid $color-gray;
+            color: $color-gray;
+            
+            @include breakpoint(md) {
+                width: 100%;
+                font-size: 13px;
+            }
+        }
+
+        img {
+            position: absolute;
+            display: block;
+            bottom: 4px;
+            right: 41px;
+
+            @include breakpoint(md) {
+                right: 0;
+            }
+        }
+
+        @include breakpoint(md) {
+            width: 100%;
+            order: 4;
+            padding: 0;
+        }
+    }
+
+    &__icons {
+
+        display: flex;
+        gap: 21px;
+
+        &-account {
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            span {
+                margin-left: 6px;
+                font-family: 'Nunito';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 13px;
+                line-height: 18px;
+        
+                color: $color-gray;
+            }
+
+            @include breakpoint(md) {
+                display: none;
+            }
+        }
+
+        &-cart {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            .count {
+                width: 14px;
+                height: 14px;
+                border-radius: 50%;
+                color: $color-white;
+                background-color: $color-acent;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 10px;
+            }
+        }
+    }
+}

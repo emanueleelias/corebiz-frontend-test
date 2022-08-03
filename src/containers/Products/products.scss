@@ -1,0 +1,136 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.products {
+    margin-top: 20px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.container__spinner {
+    height: 500px;
+    display: flex;
+    align-items: center;
+}   
+
+h2 {
+    margin: 16px 0 8px 0;
+    font-family: nunito;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 27px;
+}
+
+.divisor__products {
+    width: 65px;
+    height: 0px;
+    border-bottom: 4.29723px solid #C0C0C0;
+}
+
+.arrow {
+    cursor: pointer;
+}
+
+.productCard {
+
+    text-align: center;
+    margin-bottom: 40px;
+    display: flex;
+    
+    img {
+        width: 15rem;
+        margin: 0 auto;
+    }
+
+    .info {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 250px;
+        width: 15rem;
+        margin: 0 auto;
+        
+        .rate {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+            img {
+                width: 1rem;
+            }
+        }
+
+        &:hover {
+            background-color: rgba(182, 174, 174, 0.3);
+
+            button {
+                display: block;
+            }
+        }
+
+        button {
+            display: none;
+            background-color: $color-black;
+            color: $color-white;
+            border: 1px solid $color-black;
+            border-radius: 5px;
+            width: 10rem;
+            height: 2.5rem;
+            margin: 1.5rem .5rem;
+            cursor: pointer;
+        }
+        
+        span {
+            display: block;
+        }
+
+        .name {
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 16px;
+            padding: 20px;
+            color: $color-gray;
+        }
+
+        .priceOld {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 16px;
+            text-decoration: line-through;
+            color: $color-gray;
+            margin-bottom: 2px;
+        }
+
+        .priceNew {
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 25px;
+            margin-top: 4px;
+        }
+
+        .priceInstallments {
+            font-weight: 400;
+            font-size: 11px;
+            line-height: 15px;
+            color: $color-gray;
+        }
+
+    }
+}
+
+.slick-next:before {
+    content: none;
+}
+
+.slick-prev:before {
+    content: none;
+}
+
+.slick-arrow {
+    img {
+        display: block;
+        @include breakpoint(xl) {
+            display: none;
+        }
+    }
+}

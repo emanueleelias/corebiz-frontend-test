@@ -1,0 +1,14 @@
+@import "../../styles/mixins";
+
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+
+    @include breakpoint(xxl) {
+        max-width: 90%;
+    }
+
+    @include breakpoint(md) {
+        max-width: 90%;
+    }
+}

@@ -1,9 +1,11 @@
+import Home from "./views/Home";
+import "./styles/main.scss";
 
 const App = () => {
   return (
-    <div>
-      HOLA
-    </div>
+    <>
+      <Home />
+    </>
   )
 }
 

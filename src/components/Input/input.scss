@@ -1,0 +1,55 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.input__container {
+    @include breakpoint(md) {
+        width: 90%;
+        
+        &:nth-child(2) {
+            margin-top: 20px
+        }
+    }
+}
+
+%input {
+    padding: 14px 16px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: $color-white;
+
+    @include breakpoint(md) {
+        width: 100%;
+       
+    }
+}
+
+.input {
+    &__success, &__warning {
+        @extend %input;
+    }
+
+    &__success {
+        &:focus {
+            background-color:  rgba(50, 212, 164, 0.2);
+            
+        }
+    }
+
+    &__warning {
+        border: 2px solid rgba(252, 129, 129, 0.8);
+    }
+}
+
+.text-red {
+    margin-top: 4px;
+    margin-left: 10px;
+    color: $color-acent;
+    text-align: left;
+}
+
+input::placeholder {
+    color: $color-black-300;
+    font-size: 12px;
+    line-height: 14px;
+}
