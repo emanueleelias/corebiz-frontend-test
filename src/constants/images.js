@@ -12,6 +12,7 @@ import user from '../assets/user.svg';
 import vtex from '../assets/vtex.svg';
 import cart from '../assets/cart.svg';
 import menu from '../assets/hamburger.svg';
+import heroMobile from '../assets/hero-mobile.png';
 
 export default {
     logoWhite,
@@ -27,5 +28,6 @@ export default {
     user,
     vtex,
     cart,
-    menu
+    menu,
+    heroMobile
 }

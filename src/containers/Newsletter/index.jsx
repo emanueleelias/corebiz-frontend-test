@@ -1,13 +1,13 @@
 
-import Input from '../../components/Input';
 import { useState } from 'react';
 import { useFormik } from "formik";
-import * as Yup from "yup";
-import "./newsletter.scss";
 import { useAddNewsletterMutation } from '../../store/apis/newsletterApi';
 import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 import Spinner from '../../components/Spinner/Spinner';
+import Input from '../../components/Input';
+import * as Yup from "yup";
+import "./newsletter.scss";
+import 'react-toastify/dist/ReactToastify.css';
 
 const Newsletter = () => {
 

@@ -18,28 +18,40 @@
     text-align: center;
     font-family: nunito;
 
+    @include breakpoint(md) {
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    @include breakpoint(xl) {
+        width: 11.5%;
+        height: 98%;
+    }
+
     h2 {
         width: 25%;
         text-align: left;
         font-size: 20px;
-        font-weight: 500;
+        font-weight: 600;
+
+        @include breakpoint(xl) {
+            width: 90%;
+            margin: 0 auto;
+            font-size: 18px;
+        }
     }
 
     h3 {
-        font-weight: 700;
+        font-weight: 800;
         font-size: 30px;
         line-height: 41px;
         width: 25%;
         text-align: left;
 
-        // @include breakpoint(xl) {
-        //     //width: 100%;
-    
-        //     h3 {
-        //         width: 100%;
-        //     }
-            
-        //}
+        @include breakpoint(xl) {
+            width: 90%;
+            margin: 0 auto;
+            font-size: 25px;
+        }
     }
 }
 
@@ -53,3 +65,26 @@
     color: $color-gray-100!important;
 }
 
+.slide {
+    img {
+        @media (min-width: 1900px) {
+            margin: 0 auto;
+        }
+
+        @media (min-width: 321px) {
+            width: 100%;
+        }
+
+        @include breakpoint(md){
+            float: left;
+            opacity: 9;
+        }
+    }
+}
+
+
+.img__slide {
+    @media (min-width: 321px) {
+        width: 100%;
+    }
+}

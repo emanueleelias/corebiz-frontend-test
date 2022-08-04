@@ -1,13 +1,13 @@
-import "./products.scss";
 import {images} from "../../constants";
 import { useGetProductsQuery } from "../../store/apis/productsApi";
 import { useDispatch, useSelector } from "react-redux";
 import { increment } from "../../store/slices/cartSlice";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import { ToastContainer, toast } from 'react-toastify';
 import Slider from "react-slick";
 import Spinner from "../../components/Spinner/Spinner";
-import { ToastContainer, toast } from 'react-toastify';
+import "./products.scss";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import 'react-toastify/dist/ReactToastify.css';
 
 const SampleNextArrow = ({ onClick, className }) => {
@@ -108,7 +108,7 @@ const Products = () => {
   };
 
   return (     
-    <div className="container">
+    <div className="container__products">
       <h2>Mas Vendidos</h2>
       <div className="divisor__products"></div>
 

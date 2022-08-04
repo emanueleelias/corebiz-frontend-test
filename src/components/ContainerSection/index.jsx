@@ -1,4 +1,3 @@
-import React from 'react'
 import "./containerSection.scss";
 
 const ContainerSection = ({children}) => {

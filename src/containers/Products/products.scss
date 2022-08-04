@@ -1,6 +1,18 @@
 @import "../../styles/variables";
 @import "../../styles/mixins";
 
+.container__products {
+    max-width: 1320px;
+    margin: 0 auto;
+    @include breakpoint(xxl) {
+        max-width: 80%;
+    }
+
+    @include breakpoint(md) {
+        max-width: 80%;
+    }
+}
+
 .products {
     margin-top: 20px;
     font-family: 'Nunito', sans-serif;
@@ -60,14 +72,21 @@ h2 {
             }
         }
 
-        &:hover {
-            background-color: rgba(182, 174, 174, 0.3);
-
+        @include breakpoint(md) {
             button {
-                display: block;
+                display: block!important;
             }
         }
 
+        &:hover {
+            background-color: rgba(182, 174, 174, 0.3);
+            @media (min-width: 993px) {            
+                button {
+                    display: block;
+                }
+            }
+        }
+        
         button {
             display: none;
             background-color: $color-black;
@@ -132,5 +151,6 @@ h2 {
         @include breakpoint(xl) {
             display: none;
         }
+        
     }
 }

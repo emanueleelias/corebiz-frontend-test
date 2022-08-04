@@ -1,14 +1,15 @@
-import React, { useEffect } from 'react'
-import "./header.scss";
+import { useEffect } from 'react'
+import { setCounterValue } from '../../store/slices/cartSlice';
+import { useDispatch, useSelector } from 'react-redux';
 import {images} from "../../constants";
 import ContainerSection from '../../components/ContainerSection';
-import { useDispatch, useSelector } from 'react-redux';
-import { setCounterValue } from '../../store/slices/cartSlice';
+import "./header.scss";
 
 const Header = () => {
 
   const dispatch = useDispatch();
   const {counter} = useSelector((state) => state.cartCounter);
+
   useEffect(() => {
     if (localStorage.getItem("counter") === null) {
       dispatch(setCounterValue(0));
