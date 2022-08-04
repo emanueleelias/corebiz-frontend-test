@@ -13,7 +13,7 @@ const Newsletter = () => {
 
   const [ isLoadingButton, setIsLoadingButton ] = useState(false);
 
-  const notifySuccess = () => toast.success('¡Genial!, haz agregado el producto al carrito.', {
+  const notifySuccess = () => toast.success('Recibiras nuestras novedades pronto..', {
     position: "bottom-right",
     autoClose: 5000,
     hideProgressBar: false,
